@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: flowise
+    env: node
+    plan: free
+    buildCommand: npm install -g pnpm && pnpm install && pnpm build
+    startCommand: pnpm start
+    repo: https://github.com/DT9325/Flowise
+    branch: main
+    region: oregon
+    healthCheckPath: /
+    autoDeploy: true
